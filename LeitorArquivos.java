@@ -5,21 +5,7 @@ import java.util.Scanner;
 import java.io.File;
 
 public class LeitorArquivos {
-    public static void main(String[] args) {
-     
-        String caminhoArquivo = "./br-sem-acentos.txt";
-        String palavraDigitada; 
 
-        Scanner leitor = new Scanner(System.in);
-        
-        System.out.println("Digite uma palavra: ");
-        palavraDigitada = leitor.nextLine();
-
-        leitor.close();
-
-        buscaPalavra(caminhoArquivo, palavraDigitada);
-
-    }
 
     public static void buscaPalavra(String caminhoArquivo, String palavraDigitada){
         try (BufferedReader buffReader = new BufferedReader(new FileReader(caminhoArquivo))) {
